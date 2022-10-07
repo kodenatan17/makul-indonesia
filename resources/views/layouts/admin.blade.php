@@ -21,25 +21,25 @@
             <!--Sidebar-->
             <div class="border-right" id="sidebar-wrapper">
                 <div class="sidebar-heading text-center">
-                    <img src="/images/logo-dashboard.svg" alt="" class="my-4" />
+                    <img src="/images/admin.png" alt="" class="my-4" style="max-width: 150px;" />
                 </div>
                 <div class="list-group list-group-flush">
-                    <a href="/dashboard.html" class="list-group-item list-group-item-action">
+                    <a href="{{ route('admin-dashboard') }}" class="list-group-item list-group-item-action">
                         Dashboard
                     </a>
-                    <a href="/dashboard-products.html" class="list-group-item list-group-item-action">
-                        My Products
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Products
                     </a>
-                    <a href="/dashboard-transactions.html" class="list-group-item list-group-item-action">
-                        My Transactions
+                    <a href="{{ route('category.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/category')) ? 'active' : '' }}">
+                        Categories
                     </a>
-                    <a href="/dashboard-settings.html" class="list-group-item list-group-item-action">
-                        Store Settings
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Transactions
                     </a>
-                    <a href="/dashboard-account.html" class="list-group-item list-group-item-action">
-                        My Account
+                    <a href="{{ route('user.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/user')) ? 'active' : '' }}">
+                        Users
                     </a>
-                    <a href="/index.html" class="list-group-item list-group-item-action">
+                    <a href="#" class="list-group-item list-group-item-action">
                         Sign Out
                     </a>
                 </div>
@@ -95,7 +95,7 @@
     </div>
     <!-- Bootstrap core JavaScript -->
     @stack('prepend-script')
-    <script src="/vendor/jquery/jquery.slim.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

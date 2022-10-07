@@ -31,7 +31,7 @@ Makul Indonesia Dashboard Transaction
                                             <div class="col-md-1">
                                                 <img src="/images/dashboard-image1.png" alt="" />
                                             </div>
-                                            <div class="col-md-4">Sirup Marjan</div>
+                                            <div class="col-md-4">Boba Milk Tea</div>
                                             <div class="col-md-3">Ferry Natan</div>
                                             <div class="col-md-3">03 September, 2022</div>
                                             <div class="col-md-1 d-none d-md-block">
@@ -46,7 +46,7 @@ Makul Indonesia Dashboard Transaction
                                             <div class="col-md-1">
                                                 <img src="/images/dashboard-image1.png" alt="" />
                                             </div>
-                                            <div class="col-md-4">Sirup Marjan</div>
+                                            <div class="col-md-4">Boba Milk Tea</div>
                                             <div class="col-md-3">Ferry Natan</div>
                                             <div class="col-md-3">03 September, 2022</div>
                                             <div class="col-md-1 d-none d-md-block">
@@ -61,7 +61,7 @@ Makul Indonesia Dashboard Transaction
                                             <div class="col-md-1">
                                                 <img src="/images/dashboard-image1.png" alt="" />
                                             </div>
-                                            <div class="col-md-4">Sirup Marjan</div>
+                                            <div class="col-md-4">Boba Milk Tea</div>
                                             <div class="col-md-3">Ferry Natan</div>
                                             <div class="col-md-3">03 September, 2022</div>
                                             <div class="col-md-1 d-none d-md-block">
@@ -78,7 +78,7 @@ Makul Indonesia Dashboard Transaction
                                             <div class="col-md-1">
                                                 <img src="/images/dashboard-image1.png" alt="" />
                                             </div>
-                                            <div class="col-md-4">Sirup Marjan</div>
+                                            <div class="col-md-4">Boba Milk Tea</div>
                                             <div class="col-md-3">Ferry Natan</div>
                                             <div class="col-md-3">03 September, 2022</div>
                                             <div class="col-md-1 d-none d-md-block">
@@ -93,7 +93,7 @@ Makul Indonesia Dashboard Transaction
                                             <div class="col-md-1">
                                                 <img src="/images/dashboard-image1.png" alt="" />
                                             </div>
-                                            <div class="col-md-4">Sirup Marjan</div>
+                                            <div class="col-md-4">Boba Milk Tea</div>
                                             <div class="col-md-3">Ferry Natan</div>
                                             <div class="col-md-3">03 September, 2022</div>
                                             <div class="col-md-1 d-none d-md-block">
@@ -108,7 +108,7 @@ Makul Indonesia Dashboard Transaction
                                             <div class="col-md-1">
                                                 <img src="/images/dashboard-image1.png" alt="" />
                                             </div>
-                                            <div class="col-md-4">Sirup Marjan</div>
+                                            <div class="col-md-4">Boba Milk Tea</div>
                                             <div class="col-md-3">Ferry Natan</div>
                                             <div class="col-md-3">03 September, 2022</div>
                                             <div class="col-md-1 d-none d-md-block">

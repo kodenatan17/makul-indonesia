@@ -30,7 +30,7 @@ Makul Indonesia Dashboard Transaction Detail
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <div class="product-title">Product Name</div>
-                                            <div class="product-subtitle">Sirup Marjan</div>
+                                            <div class="product-subtitle">Boba Milk Tea</div>
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <div class="product-title">
@@ -94,9 +94,8 @@ Makul Indonesia Dashboard Transaction Detail
                                             <div class="product-subtitle">Indonesia</div>
                                         </div>
                                         <div class="col-12 col-md-3">
-                                            <div class="product-title">Status</div>
+                                            <div class="product-title">Shipping Status</div>
                                             <select name="status" id="status" v-model="status" class="form-control">
-                                                <option value="UNPAID">Unpaid</option>
                                                 <option value="PENDING">Pending</option>
                                                 <option value="SHIPPING">Shipping</option>
                                                 <option value="SUCCESS">Success</option>

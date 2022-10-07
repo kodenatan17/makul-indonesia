@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
@@ -21,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
 Route::get('/details/{id}', [DetailController::class, 'index'])->name('details');
@@ -39,5 +41,16 @@ Route::get('/dashboard/transactions/{id}', [DashboardTransactionController::clas
 
 Route::get('/dashboard/settings', [DashboardSettingController::class, 'store'])->name('dashboard-settings-store');
 Route::get('/dashboard/account', [DashboardSettingController::class, 'account'])->name('dashboard-settings-account');
+
+//prefix admin
+// ->middleware('auth','admin')
+
+Route::prefix('admin')
+    ->namespace('Admin')
+    ->group(static function () {
+        Route::get('/', [AdminDashboardController::class, 'index'])->name('admin-dashboard');
+        Route::resource('user', '\App\Http\Controllers\Admin\UserController');
+        Route::resource('category', '\App\Http\Controllers\Admin\CategoryController');
+    });
 
 Auth::routes();

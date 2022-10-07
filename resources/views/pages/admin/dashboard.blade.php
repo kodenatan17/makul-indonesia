@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.admin')
 
 @section('title')
 Makul Indonesia Dashboard
@@ -8,15 +8,15 @@ Makul Indonesia Dashboard
 <div class="section-content section-dashboard-home" data-aos="fade-up">
     <div class="container-fluid">
         <div class="dashboard-heading">
-            <h2 class="dashboard-title">Dashboard</h2>
-            <p class="dashboard-subtitle">Look what you have made today!</p>
+            <h2 class="dashboard-title">Admin Dashboard</h2>
+            <p class="dashboard-subtitle">This is Makul Indonesia Administrator Panel!</p>
             <div class="dashboard-content">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card mb-2">
                             <div class="card-body">
                                 <div class="dashboard-card-title">Customer</div>
-                                <div class="dashboard-card-subtitle">15,209</div>
+                                <div class="dashboard-card-subtitle">{{ $customer }} <span class=" ml-2 dashboard-card-title"> Customers </span> </div>
                             </div>
                         </div>
                     </div>
@@ -24,7 +24,7 @@ Makul Indonesia Dashboard
                         <div class="card mb-2">
                             <div class="card-body">
                                 <div class="dashboard-card-title">Revenue</div>
-                                <div class="dashboard-card-subtitle">RP. 931,290</div>
+                                <div class="dashboard-card-subtitle">RP. {{ $revenue }} <span class=" ml-2 dashboard-card-title"> Revenue </span> </div>
                             </div>
                         </div>
                     </div>
@@ -32,12 +32,12 @@ Makul Indonesia Dashboard
                         <div class="card mb-2">
                             <div class="card-body">
                                 <div class="dashboard-card-title">Transaction</div>
-                                <div class="dashboard-card-subtitle">22,409,399</div>
+                                <div class="dashboard-card-subtitle">{{ $transaction }} <span class=" ml-2 dashboard-card-title"> Transactions </span> </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-3">
+                <!-- <div class="row mt-3">
                     <div class="col-12 mt-2">
                         <h5 class="mb-3">Recent Transactions</h5>
                         <a href="/dashboard-transactions-details.html" class="card card-list d-block">
@@ -86,7 +86,7 @@ Makul Indonesia Dashboard
                             </div>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

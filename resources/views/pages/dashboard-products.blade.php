@@ -21,7 +21,7 @@ Makul Indonesia Dashboard Product
                         <a href="/dashboard-products-details.html" class="card card-dashboard-product d-block">
                             <div class="card-body">
                                 <img src="/images/product-image.png" alt="" class="w-100 mb-2" />
-                                <div class="product-title">Sirup Marjan</div>
+                                <div class="product-title">Boba Milk Tea</div>
                                 <div class="product-category">Foods</div>
                             </div>
                         </a>
@@ -30,7 +30,7 @@ Makul Indonesia Dashboard Product
                         <a href="/dashboard-products-details.html" class="card card-dashboard-product d-block">
                             <div class="card-body">
                                 <img src="/images/product-image.png" alt="" class="w-100 mb-2" />
-                                <div class="product-title">Sirup Marjan</div>
+                                <div class="product-title">Boba Milk Tea</div>
                                 <div class="product-category">Foods</div>
                             </div>
                         </a>
@@ -39,7 +39,7 @@ Makul Indonesia Dashboard Product
                         <a href="/dashboard-products-details.html" class="card card-dashboard-product d-block">
                             <div class="card-body">
                                 <img src="/images/product-image.png" alt="" class="w-100 mb-2" />
-                                <div class="product-title">Sirup Marjan</div>
+                                <div class="product-title">Boba Milk Tea</div>
                                 <div class="product-category">Foods</div>
                             </div>
                         </a>
@@ -48,7 +48,7 @@ Makul Indonesia Dashboard Product
                         <a href="/dashboard-products-details.html" class="card card-dashboard-product d-block">
                             <div class="card-body">
                                 <img src="/images/product-image.png" alt="" class="w-100 mb-2" />
-                                <div class="product-title">Sirup Marjan</div>
+                                <div class="product-title">Boba Milk Tea</div>
                                 <div class="product-category">Foods</div>
                             </div>
                         </a>
@@ -57,7 +57,7 @@ Makul Indonesia Dashboard Product
                         <a href="/dashboard-products-details.html" class="card card-dashboard-product d-block">
                             <div class="card-body">
                                 <img src="/images/product-image.png" alt="" class="w-100 mb-2" />
-                                <div class="product-title">Sirup Marjan</div>
+                                <div class="product-title">Boba Milk Tea</div>
                                 <div class="product-category">Foods</div>
                             </div>
                         </a>

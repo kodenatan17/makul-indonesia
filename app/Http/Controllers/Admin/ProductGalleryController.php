@@ -61,7 +61,7 @@ class ProductGalleryController extends Controller
         $products = Product::all();
 
         return view(
-            'pages.admin.product-gallery-gallery.create',
+            'pages.admin.product-gallery.create',
             [
                 'products' => $products,
             ]
@@ -77,7 +77,7 @@ class ProductGalleryController extends Controller
     public function store(ProductGalleryRequest $request)
     {
         $data = $request->all();
-        $data['photos'] = $request->file('photos')->store('assets/product','public');
+        $data['photos'] = $request->file('photos')->store('assets/products','public');
         ProductGallery::create($data);
         return redirect()->route('product-gallery.index');
     }

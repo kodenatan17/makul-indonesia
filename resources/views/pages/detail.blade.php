@@ -24,7 +24,7 @@ Makul Indonesia Detail
             </div>
         </div>
     </section>
-    <section class="store-gallery" id="gallery">
+    <section class="store-gallery mb-3" id="gallery">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8" data-aos="zoom-in">
@@ -49,12 +49,19 @@ Makul Indonesia Detail
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
-                        <h1>Boba Milk Tea</h1>
-                        <div class="owner">By Rendi Widagdo</div>
-                        <div class="price">Rp. 15.000 ,-</div>
+                        <h1>{{ $product->name }}</h1>
+                        <div class="owner">By {{ $product->user->store_name }}</div>
+                        <div class="price">Rp. {{ number_format($product->price) }} ,-</div>
                     </div>
                     <div class="col-lg-2" data-aos="zoom-in">
-                        <a href="/cart.html" class="btn btn-success px-4 text-white btn-block mb-3">Add to Cart</a>
+                        @auth
+                        <form action="{{ route('details-add', $product->id) }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <button class="btn btn-success px-4 text-white btn-block mb-3">Add to Cart</button>
+                        </form>
+                        @else
+                        <a href="{{ route('login') }}" class="btn btn-success px-4 text-white btn-block mb-3"> Sign In</a>
+                        @endauth
                     </div>
                 </div>
             </div>
@@ -63,12 +70,7 @@ Makul Indonesia Detail
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-8">
-                        <p>
-                            Boba adalah Boba berbahan dasar tepung tapioka yaitu tepung dari singkong. Tapioka itu sendiri tidak memiliki banyak rasa, sehingga rasa manis dari boba sebagian besar berasal dari gula atau madu yang direndam sebelum disajikan.
-                        </p>
-                        <p>
-                            Bubble tea yang klasik biasanya menggunakan teh hitam. Namun, seiring dengan perkembangan zaman dan inovasi, kedai boba biasanya menawarkan berbagai jenis teh untuk dipilih seperti melati, hijau, oolong, matcha, earl grey, teh buah, dan sebagainya.
-                        </p>
+                        {!! $product->description !!}
                     </div>
                 </div>
             </div>
@@ -120,6 +122,7 @@ Makul Indonesia Detail
         </section>
     </div>
 </div>
+@endsection
 
 @push('addon-script')
 <script src="/vendor/vue/vue.js"></script>
@@ -131,30 +134,20 @@ Makul Indonesia Detail
         },
         data: {
             activePhoto: 0,
-            photos: [{
-                    id: 1,
-                    url: "/images/pic_detail1.jpg"
-                },
+            photos: [
+                @foreach($product->galleries as $gallery)
                 {
-                    id: 2,
-                    url: "/images/pic_detail2.jpg"
+                    id: {{ $gallery->id }},
+                    url: "{{ Storage::url($gallery->photos) }}"
                 },
-                {
-                    id: 3,
-                    url: "/images/pic_detail3.jpg"
-                },
-                {
-                    id: 4,
-                    url: "/images/pic_detail4.jpg"
-                },
+                @endforeach
             ],
         },
         methods: {
             changeActive(id) {
                 this.activePhoto = id;
-            },
-        },
-    })
+            }
+        }
+    });
 </script>
 @endpush
-@endsection

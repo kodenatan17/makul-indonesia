@@ -49,9 +49,16 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link d-inline-block mt-2">
+                    <a href="{{ route('carts') }}" class="nav-link d-inline-block mt-2">
+                        @php
+                        $carts = \App\Models\Cart::where('users_id', Auth::user()->id)->count();
+                        @endphp
+                        @if($carts > 0)
                         <img src="/images/ico-cart.svg" alt="" />
-                        <div class="card-badge">3</div>
+                        <div class="card-badge">{{ $carts }}</div>                        
+                        @else
+                        <img src="/images/ico-empty-cart.svg" alt="" />
+                        @endif
                     </a>
                 </li>
             </ul>

@@ -11,6 +11,8 @@
 
     @stack('prepend-style')
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"/>
+
     <link href="{{url('/style/main.css')}}" rel="stylesheet" />
     @stack('addon-style')
 </head>
@@ -27,16 +29,19 @@
                     <a href="{{ route('admin-dashboard') }}" class="list-group-item list-group-item-action">
                         Dashboard
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action">
+                    <a href="{{ route('product.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/product')) ? 'active' : '' }} ">
                         Products
                     </a>
-                    <a href="{{ route('category.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/category')) ? 'active' : '' }}">
+                    <a href="{{ route('product-gallery.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/product-gallery*')) ? 'active' : '' }} ">
+                        Galleries
+                    </a>
+                    <a href="{{ route('category.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/category*')) ? 'active' : '' }}">
                         Categories
                     </a>
                     <a href="#" class="list-group-item list-group-item-action">
                         Transactions
                     </a>
-                    <a href="{{ route('user.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/user')) ? 'active' : '' }}">
+                    <a href="{{ route('user.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/user*')) ? 'active' : '' }}">
                         Users
                     </a>
                     <a href="#" class="list-group-item list-group-item-action">
@@ -98,6 +103,7 @@
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.js"></script>
     <script>
         AOS.init();
     </script>

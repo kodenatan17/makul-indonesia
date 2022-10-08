@@ -25,6 +25,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories');
+Route::get('/categories/{id}', [CategoryController::class, 'detail'])->name('categories-detail');
 Route::get('/details/{id}', [DetailController::class, 'index'])->name('details');
 Route::get('/cart', [CartController::class, 'index'])->name('carts');
 Route::get('/success', [CartController::class, 'success'])->name('success');
@@ -51,6 +52,8 @@ Route::prefix('admin')
         Route::get('/', [AdminDashboardController::class, 'index'])->name('admin-dashboard');
         Route::resource('user', '\App\Http\Controllers\Admin\UserController');
         Route::resource('category', '\App\Http\Controllers\Admin\CategoryController');
+        Route::resource('product', '\App\Http\Controllers\Admin\ProductController');
+        Route::resource('product-gallery', '\App\Http\Controllers\Admin\ProductGalleryController');
     });
 
 Auth::routes();

@@ -24,19 +24,19 @@
                     <img src="/images/logo-dashboard.svg" alt="" class="my-4" />
                 </div>
                 <div class="list-group list-group-flush">
-                    <a href="/dashboard.html" class="list-group-item list-group-item-action">
+                    <a href="{{ route('dashboard') }}" class="list-group-item list-group-item-action">
                         Dashboard
                     </a>
-                    <a href="/dashboard-products.html" class="list-group-item list-group-item-action">
+                    <a href="{{ route('dashboard-products') }}" class="list-group-item list-group-item-action">
                         My Products
                     </a>
-                    <a href="/dashboard-transactions.html" class="list-group-item list-group-item-action">
+                    <a href="{{ route('dashboard-transactions') }}" class="list-group-item list-group-item-action">
                         My Transactions
                     </a>
-                    <a href="/dashboard-settings.html" class="list-group-item list-group-item-action">
+                    <a href="{{ route('dashboard-settings-store') }}" class="list-group-item list-group-item-action">
                         Store Settings
                     </a>
-                    <a href="/dashboard-account.html" class="list-group-item list-group-item-action">
+                    <a href="{{ route('dashboard-settings-account') }}" class="list-group-item list-group-item-action">
                         My Account
                     </a>
                     <a href="/index.html" class="list-group-item list-group-item-action">

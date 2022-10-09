@@ -65,10 +65,10 @@
 
             <ul class="navbar-nav d-block d-lg-none">
                 <li class="nav-item">
-                    <a href="" class="nav-link"> Hi, Rendi </a>
+                    <a href="{{ route('dashboard') }}" class="nav-link"> Hi, {{ Auth::user()->name }} </a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link d-inline-block"> Cart </a>
+                    <a href=" {{ route('carts') }} " class="nav-link d-inline-block"> Cart </a>
                 </li>
             </ul>
             @endauth

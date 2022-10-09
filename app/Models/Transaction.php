@@ -16,9 +16,11 @@ class Transaction extends Model
         'total_price',
         'code'
     ];
-    
-    protected $hidden = [
-        
-    ];
 
+    protected $hidden = [];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'users_id', 'id');
+    }
 }

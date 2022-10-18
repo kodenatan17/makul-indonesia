@@ -16,7 +16,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $transactions = TransactionDetail::with(['tansaction.user', 'product.galleries'])
+        $transactions = TransactionDetail::with(['transaction.user', 'product.galleries'])
             ->whereHas('product', function ($product) {
                 $product->where('users_id', Auth::user()->id);
             });
@@ -27,8 +27,8 @@ class DashboardController extends Controller
         $customer = User::count();
 
         return view('pages.dashboard', [
-            'transaction.count' => $transactions->count(),
-            'transaction.data' => $transactions->get(),
+            'transaction_count' => $transactions->count(),
+            'transaction_data' => $transactions->get(),
             'revenue' => $revenue,
             'customer' => $customer,
         ]);
